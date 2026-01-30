@@ -46,7 +46,7 @@
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
         .indicator-pulse { animation: pulse 1.5s infinite; }
     </style>
-
+<script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.4",
@@ -59,11 +59,10 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-gray-50">
     <div id="root"></div>
-    <!-- Vite จะทำการเชื่อมต่อไฟล์ index.tsx และ dependencies ทั้งหมดให้เองโดยอัตโนมัติ -->
-    <script type="module" src="/index.tsx"></script>
+    <!-- ใช้ ./ เพื่อให้รองรับ sub-directory บน GitHub Pages -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
