@@ -1,6 +1,6 @@
 
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, OAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -16,3 +16,11 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const googleProvider = new GoogleAuthProvider();
+
+// เพิ่ม Microsoft Provider
+export const microsoftProvider = new OAuthProvider('microsoft.com');
+microsoftProvider.setCustomParameters({
+  prompt: 'select_account',
+  // สามารถระบุ tenant id ของบริษัทได้ถ้าต้องการบังคับเฉพาะองค์กร
+  // tenant: 'organizations' 
+});
