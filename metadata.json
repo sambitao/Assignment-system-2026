@@ -1,0 +1,7 @@
+{
+  "name": "Assignment Interruption System",
+  "description": "A comprehensive job assignment and tracking system for interruption teams with real-time Firebase integration, featuring analytics, calendars, and vendor management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
